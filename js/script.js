@@ -3,7 +3,7 @@ var lnStickyNavigation;
 $(document).ready(function () {
 	applyHeader();
 	applyNavigation();
-	applyMailTo();
+	// applyMailTo();
 	applyResize();
 	checkHash();
 	checkBrowser();
@@ -12,7 +12,7 @@ $(document).ready(function () {
 /* HEADER FUNCTIONS */
 
 function applyHeader() {
-	$('.jumbotron').css({ height: $(window).height() + 'px' });
+	$('.jumbotron').css({ height: ($(window).height()) + 'px' });
 
 	lazyLoad($('.jumbotron'));
 }
@@ -46,10 +46,8 @@ function applyClickEvent() {
 		if ($($.attr(this, 'href')).length > 0) {
 			$('html, body').animate(
 				{
-					scrollTop: $($.attr(this, 'href')).offset().top,
-				},
-				400
-			);
+					scrollTop: $($.attr(this, 'href')).offset().top
+				}, 400);
 		}
 		return false;
 	});
@@ -80,22 +78,23 @@ function applyStickyNavigation() {
 function stickyNavigation() {
 	if ($(window).scrollTop() > lnStickyNavigation) {
 		$('body').addClass('fixed');
-	} else {
+	}
+	else {
 		$('body').removeClass('fixed');
 	}
 }
 
 /* MAILTO FUNCTION */
 
-function applyMailTo() {
-	$('a[href*=mailto]').on('click', function (e) {
-		var lstrEmail = $(this).attr('href').replace('mailto:', '');
+// function applyMailTo() {
+// 	$('a[href*=mailto]').on('click', function (e) {
+// 		var lstrEmail = $(this).attr('href').replace('mailto:', '');
 
-		lstrEmail = lstrEmail.split('').reverse().join('');
+// 		lstrEmail = lstrEmail.split('').reverse().join('')
 
-		$(this).attr('href', 'mailto:' + lstrEmail);
-	});
-}
+// 		$(this).attr('href', 'mailto:' + lstrEmail);
+// 	});
+// }
 
 /* RESIZE FUNCTION */
 
@@ -103,7 +102,7 @@ function applyResize() {
 	$(window).on('resize', function () {
 		lnStickyNavigation = $('.scroll-down').offset().top + 20;
 
-		$('.jumbotron').css({ height: $(window).height() + 'px' });
+		$('.jumbotron').css({ height: ($(window).height()) + 'px' });
 	});
 }
 
@@ -125,24 +124,22 @@ function checkBrowser() {
 	if (loBrowserVersion.browser == 'Explorer' && loBrowserVersion.version < 8) {
 		$('#upgrade-dialog').modal({
 			backdrop: 'static',
-			keyboard: false,
+			keyboard: false
 		});
 	}
 }
 
 function getBrowserAndVersion() {
-	var laBrowserData = [
-		{
-			string: navigator.userAgent,
-			subString: 'MSIE',
-			identity: 'Explorer',
-			versionSearch: 'MSIE',
-		},
-	];
+	var laBrowserData = [{
+		string: navigator.userAgent,
+		subString: 'MSIE',
+		identity: 'Explorer',
+		versionSearch: 'MSIE'
+	}];
 
 	return {
 		browser: searchString(laBrowserData) || 'Modern Browser',
-		version: searchVersion(navigator.userAgent) || searchVersion(navigator.appVersion) || '0.0',
+		version: searchVersion(navigator.userAgent) || searchVersion(navigator.appVersion) || '0.0'
 	};
 }
 
@@ -157,7 +154,8 @@ function searchString(paData) {
 			if (lstrDataString.indexOf(paData[i].subString) != -1) {
 				return paData[i].identity;
 			}
-		} else if (lstrDataProp) {
+		}
+		else if (lstrDataProp) {
 			return paData[i].identity;
 		}
 	}
@@ -173,22 +171,8 @@ function searchVersion(pstrDataString) {
 	return parseFloat(pstrDataString.substring(lnIndex + this.versionSearchString.length + 1));
 }
 
-// Get the container element
-var btnContainer = document.querySelector('.navbar-nav');
-
-// Get all buttons with class="btn" inside the container
-var btns = btnContainer.querySelectorAll('li a');
-
-// Loop through the buttons and add the active class to the current/clicked button
-for (var i = 0; i < btns.length; i++) {
-	btns[i].addEventListener('click', function () {
-		var current = document.getElementsByClassName('active');
-		// If there's no active class
-		if (current.length > 0) {
-			current[0].className = current[0].className.replace('active', '');
-		}
-
-		// Add the active class to the current/clicked button
-		this.parentElement.className = 'active';
-	});
-}
+$('<img/>').attr('src', './assets/images/home.jpg').on('load', function () {
+	$(this).remove(); // prevent memory leaks as @benweet suggested
+	$('.jumbotron').css('background', 'no-repeat center right fixed url(./assets/images/home.jpg)');
+	$('.overlay').css('opacity', 0);
+});

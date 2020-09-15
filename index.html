@@ -29,7 +29,7 @@
 	<link href="./css/styles.css" rel="stylesheet" />
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar-example">
 	<div id="top" class="jumbotron" data-src="/assets/home.jpg" data-position="center right" style="height: 100vh">
 		<div class="container">
 			<h1>Priyanshu Dangi</h1>
@@ -44,6 +44,7 @@
 	</div>
 	<!-- End Of Main Home Page -->
 	<nav class="navbar navbar-default" id="navbar-example" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
 				<span class="sr-only">Toggle navigation</span>
@@ -53,16 +54,16 @@
 			</button>
 		</div>
 
+		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 			<ul class="nav navbar-nav">
-				<!-- class="active" -->
-				<li><a href="#profile">Profile</a></li>
+				<li class="active"><a href="#profile">Profile</a></li>
 				<li><a href="#experiences">Experiences</a></li>
 				<li><a href="#abilities">Abilities</a></li>
 				<li><a href="#projects">Projects</a></li>
-				<li><a href="#contact">Contacts</a></li>
+				<li><a href="#contact">Contact</a></li>
 			</ul>
-		</div>
+		</div><!-- /.navbar-collapse -->
 	</nav>
 	<div class="background-white">
 		<div id="profile" class="container">

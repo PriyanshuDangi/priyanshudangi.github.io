@@ -111,7 +111,7 @@ hr {
 }
 
 .jumbotron {
-	background: no-repeat center right fixed url(../assets/images/home.jpg);
+	/* background: no-repeat center right fixed url(../assets/images/home.jpg); */
 
 	-webkit-background-size: 100%;
 	-moz-background-size: 100%;
