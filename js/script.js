@@ -12,7 +12,7 @@ $(document).ready(function () {
 /* HEADER FUNCTIONS */
 
 function applyHeader() {
-	$('.jumbotron').css({height: $(window).height() + 'px'});
+	$('.jumbotron').css({ height: $(window).height() + 'px' });
 
 	lazyLoad($('.jumbotron'));
 }
@@ -103,7 +103,7 @@ function applyResize() {
 	$(window).on('resize', function () {
 		lnStickyNavigation = $('.scroll-down').offset().top + 20;
 
-		$('.jumbotron').css({height: $(window).height() + 'px'});
+		$('.jumbotron').css({ height: $(window).height() + 'px' });
 	});
 }
 

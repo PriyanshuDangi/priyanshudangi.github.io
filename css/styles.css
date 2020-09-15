@@ -129,7 +129,7 @@ hr {
 	margin-bottom: 0px;
 	padding: 0px;
 }
-/*.jumbotron:before { 
+/* .jumbotron:before { 
 	border: 1px solid #FFFFFF;
 	bottom: 30px;
 	content: "";
@@ -137,7 +137,7 @@ hr {
 	position: absolute;
 	right: 30px;
 	top: 30px;
-}*/
+} */
 .jumbotron .overlay {
 	background-color: #22a39f;
 	position: absolute;
