@@ -171,8 +171,14 @@ function searchVersion(pstrDataString) {
 	return parseFloat(pstrDataString.substring(lnIndex + this.versionSearchString.length + 1));
 }
 
-$('<img/>').attr('src', './assets/images/home.jpg').on('load', function () {
-	$(this).remove(); // prevent memory leaks as @benweet suggested
-	$('.jumbotron').css('background', 'no-repeat center right fixed url(./assets/images/home.jpg)');
-	$('.overlay').css('opacity', 0);
-});
+// $('<img/>').attr('src', './assets/images/home.jpg').on('load', function () {
+// 	$(this).remove(); // prevent memory leaks as @benweet suggested
+// 	$('.jumbotron').css('background', 'no-repeat center right fixed url(./assets/images/home.jpg)');
+// 	$('.overlay').css('opacity', 0);
+// });
+
+// $('<img/>').attr('src', './assets/images/bg.jpg').on('load', function () {
+// 	$(this).remove(); // prevent memory leaks as @benweet suggested
+// 	$('.jumbotron').css('background', 'no-repeat center fixed url(./assets/images/bg.jpg)');
+// 	$('.overlay').css('opacity', 0);
+// });

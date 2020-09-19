@@ -112,7 +112,7 @@ hr {
 
 .jumbotron {
 	/* background: no-repeat center right fixed url(../assets/images/home.jpg); */
-
+	background: no-repeat center fixed url('../assets/images/bg.jpg');
 	-webkit-background-size: 100%;
 	-moz-background-size: 100%;
 	-o-background-size: 100%;
@@ -145,8 +145,8 @@ hr {
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
-	opacity: 0.5;
-	filter: alpha(opacity=50);
+	opacity: 0.75;
+	filter: alpha(opacity=75);
 	z-index: 2;
 }
 
