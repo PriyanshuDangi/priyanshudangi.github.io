@@ -1,0 +1,271 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Priyanshu}{Dangi}{ \urlstyle{same}\href{http://priyanshudangi.github.io}{priyanshudangi.github.io}\\
+\href{mailto:priyanshudangipd@gmail.com}{priyanshudangipd@gmail.com} | +91 75819 57713
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{NATIONAL INSTITUTE OF  \\      TECHNOLOGY TRICHY}
+\descript{B.TECH IN COMPUTER SCIENCE ENGINEERING}
+\location{Started July 2019 \\
+Expected May 2023 \\
+Cum. GPA: 9.2}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Portfolio:// \href{https://priyanshudangi.github.io}{\bf priyanshudangi.github.io} \\
+Github:// \href{https://github.com/PriyanshuDangi}{\bf PriyanshuDangi} \\
+LinkedIn://  \href{https://www.linkedin.com/in/priyanshu-dangi/}{\bf Priyanshu Dangi} \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+
+\sectionsep
+
+\subsection{Undergraduate}
+Computer Programming \\
+Data Structures \\
+Discrete Structure\\
+Combinatorics Graph Theory \\
+Probability \\
+Principles of Programming Languages\\
+Linear Algebra and Calculus \\
+Complex Analysis and Differential
+Equations \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\location{Languages:}
+\textbullet{} C++ \textbullet{}   C \textbullet{} JavaScript \\
+\location{Web:}
+\textbullet{} Node \textbullet{} React \textbullet{} MongoDB \textbullet{} ExpressJS \\
+\textbullet{} Graphql \textbullet{} HTML/CSS \\
+\location{Tools:}
+\textbullet{} Git \textbullet{} Postman \textbullet{} Linux  \\
+\sectionsep
+
+\section{CO-CURRICULAR}
+
+\runsubsection{VORTEX EVENTS TEAM}
+\descript{| MEMBER }
+\location{Oct 2020 | NIT Trichy}
+\sectionsep
+
+\runsubsection{SPORTSFETE}
+\descript{| ORGANIZER }
+\location{Sep 2019 | NIT Trichy}
+\sectionsep
+
+\runsubsection{PIXELBUG}
+\descript{| PHOTOGRAPHER }
+\location{Feb 2020 - Present | NIT Trichy}
+\sectionsep
+
+\runsubsection{COLLEGE SPORTS TEAM}
+\descript{| TABLE
+TENNIS PLAYER }
+\location{Sep 2019 - Present | NIT Trichy}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{DELTA FORCE}
+\descript{| SOFTWARE DEVELOPER }
+\location{August 2020 - Present | NIT TRICHY}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Working for the most premier Coding Club of NIT Trichy. \href{https://delta.nitt.edu/}{(delta.nitt.edu)}
+\item Handles most of the Web and App work of college site and college fests.
+\item Full-stack developer - Working on delta and fests web apps.
+\item Currently working in Code Charater, a subteam of Pragyan- The Technical Fest of our college
+\end{tightemize}
+\sectionsep
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\runsubsection{VINIMAY}
+\descript{ | Web App | Github - \textbf{\href{https://github.com/PriyanshuDangi/vinimay_backend}{Vinimay}}}
+\location{July 2020 – Present}
+\begin{tightemize}
+\item A web app where college students can sell and buy books and other stuffs
+among other college peers.
+\item Develop the whole project myself and has mainly used the MERN stack and also
+used sockets for chat in the app ,bootstrap and redux in the frontend.
+\end{tightemize}
+\sectionsep
+\sectionsep
+
+\runsubsection{DELTA WINTER OF CODE}
+\descript{ | Web App | Link - \textbf{\href{https://dwoc.io}{dwoc.io}}}
+\location{Sep 2020 – Oct 2020}
+\begin{tightemize}
+\item DWoC is a winter long program organised with an aim to support and improve
+the culture of open source software around the college.
+\item Part of the team which developed the backend.
+\item Added github authentication, and wrote all query and mutation with Sivaraman
+in GraphQL.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{COLOR SWITCH}
+\descript{ | Web Game | Link - \textbf{\href{https://priyanshudangi.github.io/delta_task_2}{Color Switch}}}
+\location{May 2020}
+\begin{tightemize}
+\item Browser version of the famous game color switch.
+\item Built using HTML5 Canvas and javascript.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{COVID 19 DATA}
+\descript{ | Website | Link - \textbf{\href{https://priyanshudangi.github.io/covid-19}{Covid-19}}}
+\location{May 2020}
+\begin{tightemize}
+\item To get the number of cases of any district or state in India.
+\item Can get the data of daily and total number of confirmed, recovered and death
+cases.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{BURGER BUILDER}
+\descript{ | Web | Link - \textbf{\href{https://react-my-burger-5c7b5.firebaseapp.com/}{Burger}}}
+\location{June 2020}
+\begin{tightemize}
+\item Burger Builder site for ordering.
+\item Built using react and firebase
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Achivements} 
+\begin{tabular}{rll}
+
+2019	     & 2^{nd} Rank &12 th board examination ( 2 nd Rank in whole district) \\
+2019	     & 1^{st} Place & StartupWeekend - ECell, NIT Trichy\\
+2015	     &  3^{rd} Position &State Level Table Tennis Competition\\
+2014	     &  3^{rd} Position &State Level Table Tennis Competition\\
+2013	     &  1^{st}/400+ &General Knowledge Quiz School Level( 6 th - 9 th std. )\\
+
+\end{tabular}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
