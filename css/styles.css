@@ -639,6 +639,22 @@ figure.effect p {
 	transition: opacity 0.35s, transform 0.35s;
 	-webkit-transform: translate3d(100%, 0, 0);
 	transform: translate3d(100%, 0, 0);
+	font-size: 14px !important;
+}
+
+@media (min-width: 981px) and (max-width: 1200px) {
+	figure.effect p {
+		font-size: 12px !important;
+	}
+	#projects figure h3 {
+		margin-top: 5px;
+	}
+}
+
+@media (max-width: 767px) {
+	figure.effect p {
+		font-size: 12px !important;
+	}
 }
 
 figure.effect:hover p {
